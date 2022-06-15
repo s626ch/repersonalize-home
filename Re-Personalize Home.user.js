@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Re-Personalize Home
 // @namespace    https://github.com/smolyoshino/repersonalize-home
-// @version      0.1.1
+// @version      0.1.2
 // @description  reversing the dumbest change to happen to this website
 // @author       smolyoshino
 // @match        https://www.roblox.com/home
@@ -45,16 +45,17 @@ const getAvatar = async () => {
                     usersName = displayName.innerText;
                     welcomeHome = createElm(`
                         <div style="display:flex;flex-direction:row;align-items:center;">
-                            <div class="avatar-container">
+                            <div class="avatar-container" style="width:150px;">
                             <a href="`+document.getElementById("nav-profile").getAttribute("href")+`">
                                 <img src='`+avatarSrc+`' style="border-radius: 100%; border-image-width:1; border-image-size: initial; border-image-source:none;border: 0px solid white; width:150px; margin-left: 2px;"/>
                             </a>
                             </div>
                             <a href="`+document.getElementById("nav-profile").getAttribute("href")+`">
-                                <h1 style="margin-left: 84px;">Welcome home,<br/>`+usersName+`!</h1>
+                                <h1 style="margin-left: 32px;">Welcome home,<br/>`+usersName+`!</h1>
                             </a>
                         </div>
                     `);
+                    //style="margin-left: 84px;"
                     await delay(1000);
                     rbxHeader.appendChild(welcomeHome);
                     dummyVar = false;
