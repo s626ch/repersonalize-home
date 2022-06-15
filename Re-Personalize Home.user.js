@@ -55,7 +55,7 @@ const getAvatar = async () => {
                             </a>
                         </div>
                     `);
-                    await delay(750);
+                    await delay(1000);
                     rbxHeader.appendChild(welcomeHome);
                     dummyVar = false;
                 };
