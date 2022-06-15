@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Re-Personalize Home
 // @namespace    https://github.com/smolyoshino/repersonalize-home
-// @version      0.1
+// @version      0.1.1
 // @description  reversing the dumbest change to happen to this website
 // @author       smolyoshino
 // @match        https://www.roblox.com/home
@@ -55,6 +55,7 @@ const getAvatar = async () => {
                             </a>
                         </div>
                     `);
+                    await delay(750);
                     rbxHeader.appendChild(welcomeHome);
                     dummyVar = false;
                 };
